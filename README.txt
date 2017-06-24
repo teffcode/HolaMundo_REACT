@@ -20,3 +20,4 @@ PASOS PARA CREAR UN HOLA MUNDO CON REACT.JS
 6. Mostrar lo realizado en la UI (User Interface) con ReactDOM
 	- Se muestra en la UI con el método render()
 7. Finalmente, se crea el elemento id app en el tag <main>
+8. EJECUTAR EN EL NAVEGADOR 👩🏻‍💻  
