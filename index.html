@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<main id="app"></main>
+
+	<!--Con estas 2 librerías cargamos REACT
+		nos permite crear nuestros componentes
+		el DOM nos permite usar los componentes en una app web-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.js"></script>
+
+	<script>
+		// PROPS: todos los datos que queremos pasarle al momento de inicializarlo
+		function Hola(props){ 
+			const name = props.name;
+
+			// react.DOM para que cree un elemento del DOM
+			return React.DOM.h1({
+				id: 'Title',
+			}, `Hola ${name}`); 
+		}
+
+		// INSTANCIA:
+		// Primer parámetro -> Hola
+		// Segundo parámetro -> LOS PROPS {}
+		const hola = React.createElement(Hola, {
+			name: 'Mundo'
+		});
+
+		// mostrar en la UI
+		ReactDOM.render(
+			hola,
+			document.getElementById('app') // elemento del DOM
+			);
+
+		// Hacer que desps de 1 segundo, cambie el texto
+		setTimeout(
+			() => {
+				ReactDOM.render(
+				React.createElement(Hola, { name: 'Tefa' }),
+				document.getElementById('app') // mismo elemento del DOM
+				);
+			},
+
+			2000
+
+			)
+
+	</script>
+
+</body>
+</html>
